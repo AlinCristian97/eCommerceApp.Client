@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {IPagination} from "./models/pagination";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('https://localhost:5001/api/products?pageSize=50').subscribe({
-      next: (n:any) => (this.products = n.data),
+      next: (n:IPagination) => (this.products = n.data),
       error: (e:any) => (console.log(e))
     })
   }
