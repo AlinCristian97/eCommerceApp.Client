@@ -17,11 +17,9 @@
       </ul>
       <h5 class="text-warning ml-3">Types</h5>
       <ul class="list-group my-3">
-        <li class="list-group-item active">First element</li>
-        <li class="list-group-item">Second element</li>
-        <li class="list-group-item">Third element</li>
-        <li class="list-group-item">Fourth element</li>
-        <li class="list-group-item">Fifth element</li>
+        <li class="list-group-item" *ngFor="let type of types">
+          {{type.name}}
+        </li>
       </ul>
     </section>
 
