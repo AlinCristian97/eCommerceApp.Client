@@ -52,6 +52,7 @@
         <pagination
           [boundaryLinks]="true"
           [totalItems]="this.totalCount"
+          (pageChanged)="onPageChanged($event)"
           previousText="&lsaquo;"
           nextText="&rsaquo;"
           firstText="&laquo;"
