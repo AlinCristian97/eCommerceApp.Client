@@ -13,10 +13,14 @@ export class ShopComponent implements OnInit {
   constructor(private shopService: ShopService) { }
 
   ngOnInit(): void {
+
+  }
+
+  getProducts() {
     this.shopService.getProducts().subscribe({
       next: (n) => (this.products = n.data),
       error: (e) => (console.log(e))
-    })
+    });
   }
 
 }
