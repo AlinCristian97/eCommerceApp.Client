@@ -13,6 +13,9 @@ import { PagingHeaderComponent } from './components/paging-header/paging-header.
     CommonModule,
     PaginationModule.forRoot()
   ],
-  exports: [PaginationModule]
+  exports: [
+    PaginationModule,
+    PagingHeaderComponent
+  ]
 })
 export class SharedModule { }
