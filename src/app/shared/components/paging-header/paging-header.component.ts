@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ShopParams} from "../../models/shopParams";
 
 @Component({
   selector: 'app-paging-header',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paging-header.component.scss']
 })
 export class PagingHeaderComponent implements OnInit {
+  @Input() pageNumber: number;
+  @Input() pageSize: number;
+  @Input() totalCount: number;
 
   constructor() { }
 

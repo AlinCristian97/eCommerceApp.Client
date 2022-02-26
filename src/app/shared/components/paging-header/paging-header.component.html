@@ -1,9 +1,9 @@
 <header>
   <span *ngIf="totalCount && totalCount > 0">Showing
     <strong>
-      {{((this.shopParams.pageNumber - 1) * this.shopParams.pageSize) + 1}} -
-      {{(this.shopParams.pageNumber * this.shopParams.pageSize) > this.totalCount ?
-      this.totalCount : this.shopParams.pageNumber * this.shopParams.pageSize
+      {{((pageNumber - 1) * pageSize) + 1}} -
+      {{(pageNumber * pageSize) > this.totalCount ?
+      this.totalCount : pageNumber * pageSize
       }}
     </strong>
     of
