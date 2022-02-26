@@ -17,7 +17,8 @@ import { PagerComponent } from './components/pager/pager.component';
   ],
   exports: [
     PaginationModule,
-    PagingHeaderComponent
+    PagingHeaderComponent,
+    PagerComponent
   ]
 })
 export class SharedModule { }
