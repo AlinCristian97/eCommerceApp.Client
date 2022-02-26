@@ -33,14 +33,14 @@ export class ShopComponent implements OnInit {
 
   getBrands() {
     this.shopService.getBrands().subscribe({
-      next: (n) => (this.brands = n),
+      next: (n) => (this.brands = [{id: 0, name: 'All'}, ...n]),
       error: (e) => (console.log(e))
     });
   }
 
   getTypes() {
     this.shopService.getTypes().subscribe({
-      next: (n) => (this.types = n),
+      next: (n) => (this.types = [{id: 0, name: 'All'}, ...n]),
       error: (e) => (console.log(e))
     });
   }
